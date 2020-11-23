@@ -47,8 +47,11 @@ def draw():
     edge_list_path = r"edges.txt"
     DG = nx.read_edgelist(edge_list_path,create_using=nx.DiGraph())
 
-    app = Viewer(DG)
-    app.mainloop()
+    try:
+        app = Viewer(DG)
+        app.mainloop()
+    except IndexError:
+        print("(!) Citation network is empty. Try adding more papers...")
 
 while True:
     print("Input: 1 -> to build citation network, 2 -> to draw it")
