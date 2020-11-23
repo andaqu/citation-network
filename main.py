@@ -54,10 +54,10 @@ while True:
     print("Input: 1 -> to build citation network, 2 -> to draw it")
     menu = input()
 
-    if int(menu) == 1:
+    if menu == "1":
         build()
         print("Done! You can draw it now")
-    elif int(menu) == 2:
+    elif menu == "2":
         draw()
     else:
         print("OK")
